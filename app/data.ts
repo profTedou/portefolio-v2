@@ -14,7 +14,7 @@ export const portfolioData = {
       description: "Application complète de commerce en ligne avec panier, paiement sécurisé et gestion des commandes, suivi des commandes, historqiues et recommendations.",
       image: "https://images.unsplash.com/photo-1763872011479-aa293bf083a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlLWNvbW1lcmNlJTIwd2Vic2l0ZXxlbnwxfHx8fDE3NzQ1Mjk3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       technologies: ["React", "Node.js", "MongoDB", "Stripe", ""],
-      link: "#"
+      link: "https://github.com/hussel2004/Gestion_tiers.git"
     },
     {
       id: "2",
@@ -22,15 +22,15 @@ export const portfolioData = {
       description: "Web App de gestion des tiers liés aux entreprises, enregistrement, recherche et consultation des etreprises et de leurs tiers",
       image: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzc0NTYwNjEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       technologies: ["NextJS", "Java SpringBoot", "MongoDB", "Vercel"],
-      link: "#"
+      link: "https://github.com/hussel2004/Gestion_tiers.git"
     },
     {
       id: "3",
-      title: "YowYop",
-      description: "Plateforme de d'eregistrement et de gestion d'entreprises",
+      title: "YowYop-Business book et dashboard d'analyse",
+      description: "BusinessBook is a platform allowing companies to create their online presence and users to discover, rate, and contact verified professionals.",
       image: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MXx8fHwxNzc0NjExOTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       technologies: ["Next.js", "D3.js", "Jva SpringBoot", "PostgreSQL"],
-      link: "#"
+      link: "https://github.com/hussel2004/businessbookR.git"
     },
     {
       id: "4",
@@ -42,11 +42,11 @@ export const portfolioData = {
     },
     {
       id: "5",
-      title: "TODO App",
-      description: "Application de gestion de tâches avec fonctionnalités de création, édition, suppression et organisation des tâches.",
+      title: "Porteffolio Personnel",
+      description: "sites web en ligne representant mon parcours, mes projets et mes compétences",
       image: "https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzc0NTg1MDI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       technologies: ["Node.js", "Docker", "Kubernetes", "AWS"],
-      link: "#"
+      link: "https://github.com/profTedou/portefolio-v2.git"
     }
   ] as Project[],
 

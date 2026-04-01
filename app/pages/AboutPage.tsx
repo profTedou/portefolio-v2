@@ -50,22 +50,22 @@ export default function AboutPage() {
             <Card>
               <CardContent className="p-8 text-center">
                 <Briefcase className="mx-auto mb-4 text-blue-600" size={48} />
-                <h3 className="text-3xl mb-2">5+</h3>
-                <p className="text-gray-600">Années d'expérience</p>
+                <h3 className="text-3xl mb-2">4+</h3>
+                <p className="text-gray-600">Apprentissage et depoiment de solutions!</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-8 text-center">
                 <Code2 className="mx-auto mb-4 text-blue-600" size={48} />
-                <h3 className="text-3xl mb-2">50+</h3>
+                <h3 className="text-3xl mb-2">20+</h3>
                 <p className="text-gray-600">Projets réalisés</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-8 text-center">
                 <Award className="mx-auto mb-4 text-blue-600" size={48} />
-                <h3 className="text-3xl mb-2">10+</h3>
-                <p className="text-gray-600">Certifications</p>
+                <h3 className="text-3xl mb-2">5+</h3>
+                <p className="text-gray-600">Certifications dans le devellopement</p>
               </CardContent>
             </Card>
           </div>
@@ -80,12 +80,12 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl mb-4">Développement Frontend</h3>
                 <p className="text-gray-700 mb-4">
-                  Expert en React, Vue.js et frameworks modernes. Création d'interfaces 
+                  Expert en React, Angular et frameworks modernes. Création d'interfaces 
                   utilisateur intuitives et performantes avec attention particulière à 
                   l'accessibilité et l'UX.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["React", "Vue.js", "Next.js", "TypeScript", "Tailwind CSS"].map((tech) => (
+                  {["React", "Angular", "Next.js", "TypeScript", "Tailwind CSS"].map((tech) => (
                     <span
                       key={tech}
                       className="px-3 py-2 bg-white text-gray-700 rounded-lg text-sm shadow-sm"
@@ -102,7 +102,7 @@ export default function AboutPage() {
                   et microservices. Focus sur la scalabilité et la sécurité.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["Node.js", "Python", "PostgreSQL", "MongoDB", "Docker"].map((tech) => (
+                  {["Node.js", "Java, Spring Boot", "PostgreSQL", "MongoDB", "Docker"].map((tech) => (
                     <span
                       key={tech}
                       className="px-3 py-2 bg-white text-gray-700 rounded-lg text-sm shadow-sm"

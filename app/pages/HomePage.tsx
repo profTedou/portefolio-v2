@@ -62,31 +62,57 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.slice(0, 5).map((project) => (
-              <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 overflow-hidden">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl text-black mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+            {projects.slice(0, 3).map((project) => {
+              const techs = project.technologies.filter(Boolean);
+
+              return (
+                <Card
+                  key={project.id}
+                  className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
+                >
+                  <div className="relative h-64 overflow-hidden bg-slate-100">
+                    <ImageWithFallback
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                    <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow">
+                      {techs[0] || "Web"}
+                    </span>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <CardContent className="p-6">
+                    <div className="mb-4 flex items-start justify-between gap-4">
+                      <h3 className="text-2xl font-semibold text-slate-950">{project.title}</h3>
+                      <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                        Stack
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mb-6 max-h-24 overflow-hidden">{project.description}</p>
+                    <div className="mb-6 flex flex-wrap gap-2">
+                      {techs.slice(0, 3).map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-sm text-slate-700"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between gap-4">
+                      <Button asChild variant="outline" size="sm" className="w-full md:w-auto">
+                        <a href={project.link} target="_blank" rel="noreferrer">
+                          Voir le projet
+                        </a>
+                      </Button>
+                      <span className="text-sm text-slate-500">
+                        {project.link.includes("github.com") ? "Code ouvert" : "Lien projet"}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -123,9 +149,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+  
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-gray-50">
+      {/* <section id="certifications" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-12 text-center text-black">Certifications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -147,7 +173,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-white">
@@ -167,7 +193,7 @@ export default function HomePage() {
               </Card>
             ))}
           </div>
-          <div className="text-center mt-8">
+          {/* <div className="text-center mt-8">
             <Link href="/testimonials">
               <Button variant="outline">
                 Voir plus de témoignages
@@ -175,6 +201,7 @@ export default function HomePage() {
               </Button>
             </Link>
           </div>
+          */}
         </div>
       </section>
 

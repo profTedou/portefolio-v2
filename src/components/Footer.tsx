@@ -45,9 +45,10 @@ export default function Footer() {
               <Link href="/stack" className="block hover:text-gray-300">
                 Stack Technique
               </Link>
-              <Link href="/certifications" className="block hover:text-gray-300">
+              {/* <Link href="/certifications" className="block hover:text-gray-300">
                 Certifications
               </Link>
+              */}
             </div>
           </div>
 
