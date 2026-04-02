@@ -24,28 +24,44 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12">
             {projects.map((project, index) => (
-              <Card key={project.id} className="overflow-hidden hover:shadow-2xl transition-shadow">
+              <Card
+                key={project.id}
+                className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white/95 shadow-xl transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
+              >
                 <div className={`grid md:grid-cols-2 gap-8 ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}>
-                  <div className={`relative h-[400px] ${index % 2 === 1 ? "md:col-start-2" : ""}`}>
+                  <div className={`relative h-[420px] overflow-hidden ${index % 2 === 1 ? "md:col-start-2" : ""}`}>
                     <ImageWithFallback
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
                     />
+                    <div className="absolute inset-x-0 top-0 flex items-center justify-between px-5 py-4">
+                      <span className="rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-slate-900">
+                        Featured
+                      </span>
+                      <span className="rounded-full bg-slate-900/70 px-3 py-1 text-sm text-white">
+                        {project.technologies.filter(Boolean).length} techs
+                      </span>
+                    </div>
                   </div>
                   <CardContent className="p-8 flex flex-col justify-center">
-                    <h2 className="text-3xl mb-4">{project.title}</h2>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      {project.description}
-                    </p>
-                    
                     <div className="mb-6">
-                      <h3 className="text-lg mb-3">Technologies utilisées</h3>
+                      <div className="flex items-center justify-between gap-4 mb-4">
+                        <h2 className="text-3xl font-semibold text-slate-900">{project.title}</h2>
+                        <span className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-700">
+                          En ligne
+                        </span>
+                      </div>
+                      <p className="text-lg leading-7 text-slate-700">{project.description}</p>
+                    </div>
+
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-3">Technologies</h3>
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
+                        {project.technologies.filter(Boolean).map((tech) => (
                           <span
                             key={tech}
-                            className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg"
+                            className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700"
                           >
                             {tech}
                           </span>
@@ -53,15 +69,22 @@ export default function ProjectsPage() {
                       </div>
                     </div>
 
-                    <div className="flex gap-4">
-                      <Button>
+                    <div className="mt-auto flex flex-wrap gap-4">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                      >
                         <ExternalLink className="mr-2" size={18} />
-                        Voir le projet
-                      </Button>
-                      <Button variant="outline">
+                        Découvrir
+                      </a>
+                      <a href={project.link} target="_blank" rel="noreferrer"> 
+                      <Button variant="outline" className="rounded-full px-5 py-3">
                         <Github className="mr-2" size={18} />
                         Code source
                       </Button>
+                      </a>
                     </div>
                   </CardContent>
                 </div>

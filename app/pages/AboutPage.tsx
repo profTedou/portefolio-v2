@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { portfolioData } from "@/app/data";
 import { ImageWithFallback } from "@/src/components/figma/ImageWithFallback";
-import { Code2, Award, Briefcase, GraduationCap } from "lucide-react";
+import { Code2, Award, Briefcase, Download, GraduationCap } from "lucide-react";
+import { Button } from "@/src/components/ui/button";
 import { Card, CardContent } from "@/src/components/ui/card";
 
 export default function AboutPage() {
@@ -38,10 +40,23 @@ export default function AboutPage() {
                 Je crois fermement en l'importance du code propre, de l'architecture solide et de 
                 l'expérience utilisateur exceptionnelle.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Au-delà du code, je suis passionné par l'apprentissage continu, le partage de 
                 connaissances et la contribution aux communautés open source.
               </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/contact">
+                  <Button variant="outline" className="rounded-full px-6 py-3">
+                    Me contacter
+                  </Button>
+                </Link>
+                <Button asChild className="rounded-full bg-slate-900 text-white hover:bg-slate-800 px-6 py-3 transition">
+                  <a href="/cv.pdf" target="_blank" rel="noreferrer">
+                    Télécharger mon CV
+                    <Download className="ml-2" size={18} />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
 

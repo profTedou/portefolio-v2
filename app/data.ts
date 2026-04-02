@@ -11,7 +11,7 @@ export const portfolioData = {
     {
       id: "1",
       title: "Plateforme E-commerce",
-      description: "Application complète de commerce en ligne avec panier, paiement sécurisé et gestion des commandes, suivi des commandes, historqiues et recommendations.",
+      description: "Application complète de commerce en ligne avec authentification, panier, paiement sécurisé et gestion des commandes, historiques et recommendations.",
       image: "https://images.unsplash.com/photo-1763872011479-aa293bf083a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlLWNvbW1lcmNlJTIwd2Vic2l0ZXxlbnwxfHx8fDE3NzQ1Mjk3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       technologies: ["React", "Node.js", "MongoDB", "Stripe", ""],
       link: "https://github.com/hussel2004/Gestion_tiers.git"
@@ -19,7 +19,7 @@ export const portfolioData = {
     {
       id: "2",
       title: "Gestion Tiers",
-      description: "Web App de gestion des tiers liés aux entreprises, enregistrement, recherche et consultation des etreprises et de leurs tiers",
+      description: "Web App de gestion des tiers liés aux entreprises, enregistrement, recherche et consultation des etreprises et de leurs tiers.",
       image: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzc0NTYwNjEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       technologies: ["NextJS", "Java SpringBoot", "MongoDB", "Vercel"],
       link: "https://github.com/hussel2004/Gestion_tiers.git"
@@ -29,7 +29,7 @@ export const portfolioData = {
       title: "YowYop-Business book et dashboard d'analyse",
       description: "BusinessBook is a platform allowing companies to create their online presence and users to discover, rate, and contact verified professionals.",
       image: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MXx8fHwxNzc0NjExOTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      technologies: ["Next.js", "D3.js", "Jva SpringBoot", "PostgreSQL"],
+      technologies: ["Next.js", "TypeScript", "Java SpringBoot", "PostgreSQL"],
       link: "https://github.com/hussel2004/businessbookR.git"
     },
     {
@@ -57,7 +57,7 @@ export const portfolioData = {
     },
     {
       category: "Backend",
-      technologies: ["Node.js", "Java", "Spring Boot", "MongoDB", "PostgreSQL", "Prissma"]
+      technologies: ["Node.js", "Java", "Spring Boot", "MongoDB", "PostgreSQL", "Prisma"]
     },
     {
       category: "DevOps",
@@ -92,27 +92,29 @@ export const portfolioData = {
     }
   ] as Certification[],
 
+  profileViews: 1482,
+
   testimonials: [
     {
       id: "1",
-      name: "Marie Lambert",
-      role: "CEO",
-      company: "TechStart",
-      content: "Jean a transformé notre vision en une application exceptionnelle. Son professionnalisme et sa créativité ont dépassé nos attentes."
+      name: "Nadine Essimi",
+      role: "Responsable produit",
+      company: "Yaoundé Digital Lab",
+      content: "Bill a su traduire nos besoins métiers en une application claire et responsive. Sa rigueur technique et son sens du détail ont fait la différence sur ce projet local."
     },
     {
       id: "2",
-      name: "Pierre Dubois",
-      role: "Product Manager",
-      company: "InnoWeb",
-      content: "Collaboration parfaite ! Jean est réactif, compétent et toujours force de proposition. Je recommande vivement."
+      name: "Samuel Ngatchou",
+      role: "Directeur technique",
+      company: "Startup Afritech",
+      content: "Travailler avec Bill a été simple et efficace. Il apporte des solutions pragmatiques, respectant les contraintes de performance et d’UX que nous attendions."
     },
     {
       id: "3",
-      name: "Sophie Martin",
-      role: "CTO",
-      company: "Digital Solutions",
-      content: "Un développeur talentueux qui comprend les enjeux business. Son code est propre et maintenable."
+      name: "Amina Fonkou",
+      role: "Chef de projet innovation",
+      company: "Université Polytech",
+      content: "Son approche collaborative et son sens de l’écoute ont permis de livrer une plateforme professionnelle et adaptée aux besoins des utilisateurs camerounais."
     }
   ] as Testimonial[],
 

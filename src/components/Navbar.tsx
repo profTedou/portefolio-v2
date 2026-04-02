@@ -18,11 +18,11 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-blue-800/100 backdrop-blur-md border-b">
+    <nav className="fixed top-0 w-full z-50 bg-blue-600/100 backdrop-blur-md border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-White-900">
+          <Link href="/" className="text-2xl font-bold text-white">
             FBJ @profTedou
           </Link>
 
@@ -34,8 +34,8 @@ export default function Navbar() {
                 href={link.path}
                 className={` transition-colors ${
                   isActive(link.path)
-                    ? "text-black"
-                    : "text-gray-500 hover:text-gray-900"
+                    ? "text-white font-semibold underline"
+                    : "text-gray-650 hover:text-gray-900"
                 }`}
               >
                 {link.name}

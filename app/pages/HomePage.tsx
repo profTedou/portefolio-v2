@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, Code2, Award, MessageSquare, Mail } from "lucide-react";
+import { ArrowRight, Code2, Award, MessageSquare, Mail, Download } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent } from "@/src/components/ui/card";
 import { portfolioData } from "@/app/data";
 import { ImageWithFallback } from "@/src/components/figma/ImageWithFallback";
 
 export default function HomePage() {
-  const { name, title, bio, aboutImage, projects, stack, certifications, testimonials } = portfolioData;
+  const { name, title, bio, aboutImage, projects, stack, certifications, testimonials, profileViews } = portfolioData;
 
   return (
     <div className="pt-16">
@@ -16,11 +16,17 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-7xl mb-6">{name}</h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">{title}</p>
           <Link href="/contact">
-            <Button size="lg" className="text-lg px-8 py-6 hover:bg-blue-700 transition-colors">
+            <Button
+              size="lg"
+              className="text-lg px-8 py-6 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_20px_60px_-30px_rgba(37,99,235,0.8)] hover:brightness-110 hover:shadow-[0_24px_80px_-35px_rgba(37,99,235,0.75)] transform transition duration-200"
+            >
               Me contacter
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </Link>
+          {/* <p className="mt-8 text-sm text-slate-700 md:text-base">
+            Déjà <span className="font-semibold text-slate-900">{profileViews.toLocaleString("fr-FR")}</span> personnes ont visité mon profil.
+          </p> */}
         </div>
       </section>
 
@@ -31,18 +37,26 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">{bio}</p>
-              <Link href="/about">
-                <Button variant="outline">
-                  En savoir plus
-                  <ArrowRight className="ml-2" size={18} />
+              <div className="flex flex-wrap gap-4">
+                <Link href="/about">
+                  <Button variant="outline" className="rounded-full px-6 py-3">
+                    En savoir plus
+                    <ArrowRight className="ml-2" size={18} />
+                  </Button>
+                </Link>
+                <Button asChild className="rounded-full bg-slate-900 text-white hover:bg-slate-800 px-6 py-3 transition">
+                  <a href="/cv.pdf" target="_blank" rel="noreferrer">
+                    Voir mon CV
+                    <Download className="ml-2" size={18} />
+                  </a>
                 </Button>
-              </Link>
+              </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
                 src={aboutImage}
                 alt={name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[center_20%]"
               />
             </div>
           </div>
@@ -63,27 +77,47 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.slice(0, 3).map((project) => (
-              <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 overflow-hidden">
+              <Card
+                key={project.id}
+                className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-lg transition duration-500 hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <div className="relative h-56 overflow-hidden">
                   <ImageWithFallback
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3">
+                    <span className="rounded-full bg-slate-900/80 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white">
+                      Projet
+                    </span>
+                    <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-slate-700">
+                      {project.technologies.filter(Boolean).length} techs
+                    </span>
+                  </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl text-black mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
+                  <h3 className="text-2xl font-semibold text-slate-900 mb-3">{project.title}</h3>
+                  <p className="text-sm leading-6 text-slate-600 mb-5">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.filter(Boolean).slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm"
+                        className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:text-blue-700"
+                  >
+                    Voir le projet
+                    <ArrowRight size={16} />
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -188,7 +222,11 @@ export default function HomePage() {
             Vous avez un projet en tête ? N'hésitez pas à me contacter pour en discuter.
           </p>
           <Link href="/contact">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="text-lg px-8 py-6 rounded-full bg-white text-slate-900 shadow-lg shadow-slate-900/10 hover:-translate-y-0.5 hover:shadow-xl transform transition duration-200"
+            >
               Me contacter
               <ArrowRight className="ml-2" size={20} />
             </Button>
