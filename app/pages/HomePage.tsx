@@ -6,7 +6,7 @@ import { portfolioData } from "@/app/data";
 import { ImageWithFallback } from "@/src/components/figma/ImageWithFallback";
 
 export default function HomePage() {
-  const { name, title, bio, aboutImage, projects, stack, certifications, testimonials, profileViews } = portfolioData;
+  const { name, title, bio, aboutImage, projects, stack, certifications, testimonials, profileViews, cv } = portfolioData;
 
   return (
     <div className="pt-16">
@@ -45,7 +45,7 @@ export default function HomePage() {
                   </Button>
                 </Link>
                 <Button asChild className="rounded-full bg-slate-900 text-white hover:bg-slate-800 px-6 py-3 transition">
-                  <a href="/cv.pdf" target="_blank" rel="noreferrer">
+                  <a href={cv} target="_blank" rel="noreferrer">
                     Voir mon CV
                     <Download className="ml-2" size={18} />
                   </a>

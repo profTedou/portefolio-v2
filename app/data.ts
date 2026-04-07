@@ -3,8 +3,15 @@ import { Project, StackItem, Certification, Testimonial, ContactInfo } from "./t
 export const portfolioData = {
   name: "Fotedou Bill Junior",
   title: "Développeur Web et Mobile",
-  bio: "Passionné par le développement web et mobile, je me positionne également comme concepteur de solutions technologiques orientées impact. Actuellement en 4ᵉ année de Génie Informatique à Polytech, j’ai acquis une solide base théorique complétée par une expérience pratique à travers plusieurs projets académiques et professionnels.Au fil de mon parcours, j’ai conçu et développé des applications modernes en mettant l’accent sur la performance, l’expérience utilisateur et la robustesse des architectures. Curieux et rigoureux, je suis constamment à la recherche de nouveaux défis techniques et d’opportunités d’apprentissage afin d’améliorer mes compétences et proposer des solutions innovantes adaptées aux besoins réels.",
+  bio: "Étudiant en 4eme Génie Informatique à l’Ecole Nationale Supérieure Polytechnique de Yaoundé, " + 
+                "je me concentre sur le développement web et mobile avec une priorité :" + 
+                " concevoir des solutions qui répondent à des besoins concrets. Mon parcours m’a permis de développer des compétences, "+
+                "que j’ai progressivement consolidées à travers divers projets,"+
+                "en arborant des problématiques concrètes de performance et d’ergonomie. "+
+                "Je me contente pas de coder une interface : je cherche à comprendre l’usage derrière pour bien bâtir des solutions utiles et bien structurées. "+
+                "Structuré et pragmatique je m’attache à concevoir des solutions efficaces, pensées pour répondre aux usages réels.",
   aboutImage:"IMG_6439.JPG",
+  cv: "FOTEDOU_BILL_JUNIOR_FlowCV_Resume_2026-04-05.pdf",
   // aboutImage: "https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzQ1Mjc3MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
 
   projects: [
@@ -36,7 +43,8 @@ export const portfolioData = {
       id: "4",
       title: "Site Vitrine Entreprise",
       description: "Site vitrine moderne pour une entreprise avec animations et design responsive.",
-      image: "https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzc0NTg1MDI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "#",
+      //image: "https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzc0NTg1MDI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       technologies: ["Next.js", "Tailwind CSS", "SchadCN/ChakraUI"],
       link: "#"
     },
@@ -44,7 +52,8 @@ export const portfolioData = {
       id: "5",
       title: "Porteffolio Personnel",
       description: "sites web en ligne representant mon parcours, mes projets et mes compétences",
-      image: "https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzc0NTg1MDI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image:"Capture d’écran du 2026-04-05 19-50-18.png",
+      // image: "https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzc0NTg1MDI0fDA&ixlib=rb-4.1.0&q=80&w=1080", 
       technologies: ["Node.js", "Docker", "Kubernetes", "AWS"],
       link: "https://github.com/profTedou/portefolio-v2.git"
     }

@@ -42,7 +42,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link href="/about">
-                <Button variant="outline">
+                <Button variant="outline" className="text-white">
                   En savoir plus
                   <ArrowRight className="ml-2" size={18} />
                 </Button>
